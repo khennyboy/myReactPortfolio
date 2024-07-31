@@ -3,7 +3,7 @@ import Nav from "../ui/nav"
 
 const Profile = () => {
     return (
-        <header>
+        <header className="h-screen pb-8">
             <Nav />
             <Header />
         </header>

@@ -16,9 +16,14 @@
 
 body{
   font-size: 1.2rem;
+  color: theme('colors.light.grey_700');
   background-color: theme('colors.light.grey_0');
 }
 html.dark body{
   background-color: theme('colors.dark.grey_50');
   color: theme('colors.dark.grey_700');
+}
+
+*{
+  transition:  0.2s linear;
 }

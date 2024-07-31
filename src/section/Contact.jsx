@@ -9,6 +9,7 @@ const Contact = () => {
                 <p>
                     I would love to hear about your project and how i could help.
                 </p>
+                <img src="/3d-graphic-designer-showing-thumbs-up-png 1.png" alt="" />
                 <Modal.Open>
                     <button >
                         Contact me! <span><LuMessageSquare /></span>
