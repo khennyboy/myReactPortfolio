@@ -4,13 +4,14 @@ import { LuMessageSquare } from "react-icons/lu";
 const Header = () => {
     return (
 
-        <div className="pt-[7rem]  h-full 
+        <div className="pt-[5rem]  h-full 
          flex flex-col justify-evenly items-center">
             <div>
                 <h1 className="text-center text-2xl mb-4 leading-7">Nice to meet you! I am <br className="hidden" />
                     Sheriff Abdullateef
                 </h1>
-                <p className="text-center mb-6 leading-tight">Based in Nigeria, I&#39;m a front end web developer <br className="hidden" />Passionate
+                <p className="text-center mb-6 leading-tight">Based in Nigeria,
+                    I&#39;m a front end web developer <br className="hidden" />Passionate
                     about building accessible web apps that users love.</p>
                 <div className="flex justify-center gap-4">
 
