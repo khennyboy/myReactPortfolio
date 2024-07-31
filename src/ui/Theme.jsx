@@ -10,7 +10,8 @@ const Theme = () => {
             <button onClick={toggleDarkMode}
                 className="hover:bg-light-grey_100 block p-2  rounded-md
                         focus:ring-normal-brand_600 focus:ring-1
-                        text-normal-brand_600  dark:hover:bg-dark-grey_100">
+                        text-normal-brand_600  dark:hover:bg-dark-grey_100
+                        dark:text-dark-grey_700">
                 {IsDark ? <HiOutlineSun className="w-[1.4rem] h-[1.4rem] " /> : <LuMoonStar className="w-[1.4rem] h-[1.4rem] " />}
             </button>
         </li>

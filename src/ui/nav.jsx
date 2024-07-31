@@ -14,7 +14,7 @@ const Nav = () => {
                         className="hover:bg-light-grey_100 block p-2 
                          rounded-md
                         focus:ring-normal-brand_600 focus:ring-1 text-normal-brand_600
-                         dark:hover:bg-dark-grey_100">
+                         dark:hover:bg-dark-grey_100 dark:text-dark-grey_700">
                         <FaGithub className="w-[1.4rem] h-[1.4rem] " />
                     </a>
                 </li>
@@ -23,7 +23,7 @@ const Nav = () => {
                         className="hover:bg-light-grey_100 block p-2 
                          rounded-md
                         focus:ring-normal-brand_600 focus:ring-1 text-normal-brand_600
-                        dark:hover:bg-dark-grey_100">
+                        dark:hover:bg-dark-grey_100 dark:text-dark-grey_700">
                         <FaLinkedin className="w-[1.4rem] h-[1.4rem]" />
                     </a>
                 </li>
@@ -32,7 +32,7 @@ const Nav = () => {
                         className="hover:bg-light-grey_100 block p-2 
                          rounded-md
                         focus:ring-normal-brand_600 focus:ring-1 text-normal-brand_600
-                         dark:hover:bg-dark-grey_100">
+                         dark:hover:bg-dark-grey_100 dark:text-dark-grey_700">
                         <BsTwitterX className="w-[1.4rem] h-[1.4rem] " />
                     </a>
                 </li>
@@ -41,7 +41,7 @@ const Nav = () => {
                         className="hover:bg-light-grey_100 block p-2 
                          rounded-md
                         focus:ring-normal-brand_600 focus:ring-1 text-normal-brand_600
-                         dark:hover:bg-dark-grey_100">
+                         dark:hover:bg-dark-grey_100 dark:text-dark-grey_700">
                         <FaInstagram className="w-[1.4rem] h-[1.4rem] " />
                     </a>
                 </li>

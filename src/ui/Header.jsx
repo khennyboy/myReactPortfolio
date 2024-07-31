@@ -20,8 +20,8 @@ const Header = () => {
                     </a>
 
                     <button className="bg-normal-brand_600 text-normal-brand_50 w-[40%] 
-                     focus:ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 
-                      text-center hover:bg-normal-brand_700">
+                     ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 
+                      text-center hover:bg-normal-brand_700  ">
                         Contact me <LuMessageSquare className="inline-block" />
                     </button>
                 </div>
