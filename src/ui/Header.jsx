@@ -10,7 +10,7 @@ const Header = () => {
                 <h1 className="text-center text-2xl mb-12">Nice to meet you! I am <br className="hidden" />
                     Sheriff Abdullateef
                 </h1>
-                <div className="flex justify-center gap-2">
+                <div className="flex justify-center gap-4">
 
                     <a href="/sheriffResume.pdf" download='sheriff Resume'
                         className="py-2 bg-normal-brand_600 text-normal-brand_50 w-[40%] rounded
@@ -21,7 +21,7 @@ const Header = () => {
 
                     <button className="bg-normal-brand_600 text-normal-brand_50 w-[40%] 
                      ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 
-                      text-center hover:bg-normal-brand_700  ">
+                      text-center hover:bg-normal-brand_700 ">
                         Contact me <LuMessageSquare className="inline-block" />
                     </button>
                 </div>
