@@ -79,7 +79,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif']
+        sans: ['Josefin Sans', 'sans-serif']
       },
       screens: {
         tablet: '55em',

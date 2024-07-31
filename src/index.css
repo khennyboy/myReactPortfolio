@@ -14,4 +14,11 @@
   mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
 }
 
-
+body{
+  font-size: 1.2rem;
+  background-color: theme('colors.light.grey_0');
+}
+html.dark body{
+  background-color: theme('colors.dark.grey_50');
+  color: theme('colors.dark.grey_700');
+}

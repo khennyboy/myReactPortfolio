@@ -1,6 +1,7 @@
 import Contact from "../section/Contact"
 import Footer from "../section/Footer"
 import Profile from "../section/Profile"
+import Project from "../section/Projects"
 import Skills from "../section/Skills"
 
 const Allpage = () => {
@@ -8,6 +9,7 @@ const Allpage = () => {
         <div>
             <Profile />
             <Skills />
+            <Project />
             <Contact />
             <Footer />
         </div>
