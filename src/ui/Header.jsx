@@ -7,9 +7,11 @@ const Header = () => {
         <div className="pt-[7rem]  h-full 
          flex flex-col justify-evenly items-center">
             <div>
-                <h1 className="text-center text-2xl mb-12">Nice to meet you! I am <br className="hidden" />
+                <h1 className="text-center text-2xl mb-4 leading-7">Nice to meet you! I am <br className="hidden" />
                     Sheriff Abdullateef
                 </h1>
+                <p className="text-center mb-6 leading-tight">Based in Nigeria, I&#39;m a front end web developer <br className="hidden" />Passionate
+                    about building accessible web apps that users love.</p>
                 <div className="flex justify-center gap-4">
 
                     <a href="/sheriffResume.pdf" download='sheriff Resume'
