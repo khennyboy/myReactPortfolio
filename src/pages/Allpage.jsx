@@ -6,7 +6,7 @@ import Skills from "../section/Skills"
 
 const Allpage = () => {
     return (
-        <div className="w-[95%] mx-auto">
+        <div className="w-[95%] mx-auto md:w-[90%] lg:w-[85%]">
             <Profile />
             <Skills />
             <Project />
