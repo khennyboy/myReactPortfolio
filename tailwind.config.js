@@ -83,7 +83,8 @@ export default {
       },
       screens: {
         tablet: '55em',
-        desktop: { max: '94em', min: '75.1em' }
+        desktop: { max: '94em', min: '75.1em' },
+        smallMobile: { max: '22.5em' }
       },
     },
   },

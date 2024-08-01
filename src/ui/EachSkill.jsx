@@ -9,25 +9,25 @@ import { IoIosGitMerge } from "react-icons/io";
 const EachSkill = () => {
     return (
         <>
-            <div>
+            <div className="text-6xl md:text-[5rem]" title="Html5">
                 <FaHtml5 />
             </div>
-            <div>
+            <div className="text-6xl md:text-[5rem]" title="Css3">
                 <DiCss3 />
             </div>
-            <div>
+            <div className="text-6xl md:text-[5rem]" title="Javascript">
                 <IoLogoJavascript />
             </div>
-            <div>
+            <div className="text-6xl md:text-[5rem]" title="Tailwindcss">
                 <SiTailwindcss />
             </div>
-            <div>
+            <div className="text-6xl md:text-[5rem]" title="React">
                 <FaReact />
             </div>
-            <div>
+            <div className="text-6xl md:text-[5rem]" title="Nextjs">
                 <RiNextjsFill />
             </div>
-            <div>
+            <div className="text-6xl md:text-[5rem]" title="Git">
                 <IoIosGitMerge />
             </div>
         </>

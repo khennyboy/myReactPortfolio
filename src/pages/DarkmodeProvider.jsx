@@ -1,10 +1,11 @@
-import { createContext, useEffect } from "react";
+import { createContext, useEffect, useRef } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const DarkModeContext = createContext();
 
 function DarkModeProvider(info) {
     const { children } = info
+    const ref = useRef()
 
     const [IsDark, setMode] = useLocalStorage();
 
@@ -25,7 +26,7 @@ function DarkModeProvider(info) {
     }
 
     return (
-        <DarkModeContext.Provider value={{ IsDark, toggleDarkMode }}>
+        <DarkModeContext.Provider value={{ IsDark, toggleDarkMode, ref }}>
             {children}
         </DarkModeContext.Provider>
     );

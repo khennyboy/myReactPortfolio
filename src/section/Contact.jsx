@@ -1,11 +1,14 @@
 import { LuMessageSquare } from "react-icons/lu"
 import Form from "../ui/Form"
 import Modal from "../ui/Modal"
+import { useContext } from "react"
+import { DarkModeContext } from "../pages/DarkmodeProvider"
 
 const Contact = () => {
+    const { ref } = useContext(DarkModeContext)
     return (
         <Modal>
-            <div className="dark:bg-dark-grey_0 bg-light-grey_50">
+            <div className="dark:bg-dark-grey_0 bg-light-grey_50" ref={ref}>
                 <p>
                     I would love to hear about your project and how i could help.
                 </p>
