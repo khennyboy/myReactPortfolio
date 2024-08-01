@@ -19,13 +19,13 @@ const Header = () => {
                         className="py-2 bg-normal-brand_600 text-normal-brand_50 w-[40%] rounded
                     focus:ring-1 ring-offset-2 hover:bg-normal-brand_700
                      focus:ring-normal-brand_600 block text-center">
-                        Resume <MdFileDownload className="inline-block" />
+                        Resume <MdFileDownload className="inline-block align-middle" />
                     </a>
 
                     <button className="bg-normal-brand_600 text-normal-brand_50 w-[40%] 
                      ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 
                       text-center hover:bg-normal-brand_700 ">
-                        Contact me <LuMessageSquare className="inline-block" />
+                        Contact me <LuMessageSquare className="inline-block align-middle" />
                     </button>
                 </div>
             </div >
