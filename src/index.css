@@ -43,20 +43,22 @@ input:not(:placeholder-shown) ~ label, textarea:not(:placeholder-shown) ~ label 
   @apply 
     top-0 
     -translate-y-1/2 
-    bg-normal-backdropColor 
+    dark:bg-normal-backdropColor 
+    bg-light-grey_100
     px-4;
 }
-
-.section {
-  opacity: 0;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+input:-webkit-autofill{
+  -webkit-text-fill-color: theme('colors.light.grey_700');
+  -webkit-background-clip: text;
 }
-
-.section-right {
-  animation-name: slideInRight;
+html.dark input:-webkit-autofill{
+  -webkit-text-fill-color: theme('colors.dark.grey_700');
 }
-
-.section-left {
-  animation-name: slideInLeft;
+.projects > :not(:first-child){
+  padding-top: 3rem;
+}
+@media screen and (min-width: 768px)  {
+  .projects > :not(:first-child){
+    padding-top: 0rem;
+  }
 }

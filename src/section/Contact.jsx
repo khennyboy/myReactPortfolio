@@ -16,7 +16,7 @@ const Contact = () => {
                 </p>
                 <img src="/3d-graphic-designer-showing-thumbs-up-png 1.png" alt="Contact_icon" className="max-w-[40%] w-[300px] mx-auto mb-4" />
                 <Modal.Open>
-                    <button className="bg-normal-brand_600 text-normal-brand_50 w-[40%] 
+                    <button className="bg-normal-brand_600 text-normal-brand_50 w-[45%] 
                      max-w-[200px] ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 
                      smallMobile:w-[45%] smallMobile:text-base block mx-auto font-[500]
                       text-center hover:bg-normal-brand_700 dark:ring-offset-dark-grey_50">

@@ -15,8 +15,8 @@ const Form = () => {
                     rounded-[10px] dark:border-dark-grey_200 mb-1 has-[:focus]:border-normal-brand_600">
                     <input type="text" id="name" className="focus:outline-0 bg-transparent py-4 w-full block pl-4 peer" placeholder=" " ref={ref} />
                     <label htmlFor="name" className="absolute top-1/2 left-4 -translate-y-1/2 peer-focus:top-0 
-                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-50
-                    peer-focus:bg-normal-backdropColor z-50 peer-focus:px-4">Name</label>
+                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-80
+                    dark:peer-focus:bg-normal-backdropColor peer-focus:bg-light-grey_100  z-50 peer-focus:px-4">Name</label>
                 </div>
                 <Error error={message} />
             </div>
@@ -25,8 +25,8 @@ const Form = () => {
                      rounded-[10px] dark:border-dark-grey_200 mb-1 has-[:focus]:border-normal-brand_600">
                     <input type="text" id="email" className="focus:outline-0 bg-transparent py-4 w-full block pl-4 peer" placeholder=" " />
                     <label htmlFor="email" className="absolute top-1/2 left-4 -translate-y-1/2 peer-focus:top-0 
-                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-50
-                    peer-focus:bg-normal-backdropColor z-50 peer-focus:px-4">Email</label>
+                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-80
+                    dark:peer-focus:bg-normal-backdropColor peer-focus:bg-light-grey_100 z-50 peer-focus:px-4">Email</label>
                 </div>
                 <Error error={message} />
             </div>
@@ -35,8 +35,8 @@ const Form = () => {
                         rounded-[10px] dark:border-dark-grey_200 mb-1 has-[:focus]:border-normal-brand_600">
                     <textarea id="message" className="bg-transparent block w-full resize-none min-h-[150px] focus:outline-0 overflow-auto px-4 pt-4 peer" placeholder=" " />
                     <label htmlFor="message" className="absolute top-4 left-4  peer-focus:top-0 
-                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-50
-                    peer-focus:bg-normal-backdropColor z-50 peer-focus:px-4">Message</label>
+                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-80
+                   dark:peer-focus:bg-normal-backdropColor peer-focus:bg-light-grey_100 z-50 peer-focus:px-4">Message</label>
                 </div>
                 <Error error={message} />
             </div>
