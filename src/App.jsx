@@ -8,7 +8,7 @@ import Allpage from "./pages/Allpage"
 import { Toaster } from "react-hot-toast"
 import './index.css'
 import DarkModeProvider from "./pages/DarkmodeProvider"
-
+import 'aos/dist/aos.css';
 
 const router = createBrowserRouter(
     createRoutesFromElements(

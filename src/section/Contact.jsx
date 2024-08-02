@@ -1,16 +1,24 @@
 import { LuMessageSquare } from "react-icons/lu"
 import Form from "../ui/Form"
 import Modal from "../ui/Modal"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { DarkModeContext } from "../pages/DarkmodeProvider"
+import Aos from "aos"
 
 const Contact = () => {
     const { ref } = useContext(DarkModeContext)
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    }, []);
     return (
         <Modal>
             <section className="dark:bg-dark-grey_0 bg-light-grey_50 
          my-[6rem] py-[4rem] lg:py-[6rem] border-light-grey_200 border-[1px] border-solid 
-         rounded-[10px] dark:border-dark-grey_200" ref={ref}>
+         rounded-[10px] dark:border-dark-grey_200 " ref={ref} data-aos="fade-right">
                 <p className="text-center text-2xl px-4 mb-4">
                     I would love to hear about your project and how i could help.
                 </p>
