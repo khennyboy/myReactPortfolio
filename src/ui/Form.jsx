@@ -40,13 +40,13 @@ const Form = () => {
                 </div>
                 <Error error={message} />
             </div>
-            <div className="flex gap-4 justify-end">
-                <button type="submit" className="bg-normal-brand_600 text-normal-brand_50 w-[30%] 
-                     max-w-[150px] ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 smallMobile:w-[45%] smallMobile:text-base
-                      text-center hover:bg-normal-brand_700 dark:ring-offset-dark-grey_50 font-[500]">Send</button>
+            <div className="flex gap-4 justify-end ">
                 <button type="reset" className="bg-normal-brand_600 text-normal-brand_50 w-[30%] 
                      max-w-[150px] ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 smallMobile:w-[45%] smallMobile:text-base
                       text-center hover:bg-normal-brand_700 dark:ring-offset-dark-grey_50 font-[500]">Reset</button>
+                <button type="submit" className="bg-normal-brand_600 text-normal-brand_50 w-[30%] 
+                     max-w-[150px] ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 smallMobile:w-[45%] smallMobile:text-base
+                      text-center hover:bg-normal-brand_700 dark:ring-offset-dark-grey_50 font-[500]">Send</button>
             </div>
         </form>
     )
