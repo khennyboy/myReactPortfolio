@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 const Nav = () => {
 
     return (
-        <nav className="flex flex-col items-center fixed top-8 left-0 right-0 mx-auto gap-3">
+        <nav className="flex flex-col items-center absolute top-8 left-0 right-0 mx-auto gap-3">
             <h3 className="text-3xl leading-7 ">Sheriff</h3>
             <ul className="flex gap-2 ">
                 <li>
