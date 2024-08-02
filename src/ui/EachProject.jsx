@@ -1,10 +1,19 @@
+import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
+import Aos from "aos";
 
 const EachProject = () => {
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    }, []);
     return (
         <>
-            <div className="lg:px-8 px-4 ">
+            <div className="lg:px-8 px-4" data-aos="fade-left">
                 <img src="/desktop-preview.jpg" alt="ProjectImage"
                     className="rounded-[10px] mb-6 min-h-[300px] " />
                 <div className="text-xl mb-4 leading-3">Project name</div>
@@ -25,7 +34,7 @@ const EachProject = () => {
                     </a>
                 </div>
             </div>
-            <div className="px-4 lg:px-8 ">
+            <div className="px-4 lg:px-8 " data-aos="fade-right">
                 <img src="/desktop-preview.jpg" alt="ProjectImage"
                     className="rounded-[10px] mb-6 min-h-[300px]" />
                 <div className="text-xl mb-4 leading-3">Project name</div>
@@ -46,7 +55,7 @@ const EachProject = () => {
                     </a>
                 </div>
             </div>
-            <div className="px-4 lg:px-8">
+            <div className="px-4 lg:px-8" data-aos="fade-left">
                 <img src="/desktop-preview.jpg" alt="ProjectImage"
                     className="rounded-[10px] mb-6 min-h-[300px]" />
                 <div className="text-xl mb-4 leading-3">Project name</div>
@@ -67,7 +76,7 @@ const EachProject = () => {
                     </a>
                 </div>
             </div>
-            <div className="px-4 lg:px-8">
+            <div className="px-4 lg:px-8" data-aos="fade-right">
                 <img src="/desktop-preview.jpg" alt="ProjectImage"
                     className="rounded-[10px] mb-6 min-h-[300px]" />
                 <div className="text-xl mb-4 leading-3">Project name</div>
