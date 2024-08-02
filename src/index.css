@@ -28,3 +28,22 @@ a, button{
   transition:  0.2s linear;
 }
 
+textarea::-webkit-scrollbar{
+  display: none;
+}
+input, textarea{
+  color: inherit;
+  font: inherit;
+}
+form > *{
+  font-size: 1rem;
+}
+
+input:not(:placeholder-shown) ~ label, textarea:not(:placeholder-shown) ~ label {
+  @apply 
+    top-0 
+    -translate-y-1/2 
+    bg-normal-backdropColor 
+    px-4;
+}
+

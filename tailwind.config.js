@@ -76,6 +76,10 @@ export default {
           brand_700: "#4338ca",
           brand_800: "#3730a3",
           brand_900: "#312e81",
+          primary_800: "#2C3D4F",
+          primary_950: '#141C24',
+          backdropColor: 'rgba(255, 255, 255, 0.1)',
+          box_shadow: 'shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.12)'
         }
       },
       fontFamily: {

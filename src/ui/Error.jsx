@@ -3,7 +3,7 @@ const Error = (info) => {
     const { error } = info
     return (
         <div>
-            {error} <span><BiError /></span>
+            <BiError className="inline-block text-red-600" /> {error}
         </ div>
     )
 }

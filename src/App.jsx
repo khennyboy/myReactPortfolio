@@ -9,11 +9,12 @@ import { Toaster } from "react-hot-toast"
 import './index.css'
 import DarkModeProvider from "./pages/DarkmodeProvider"
 
+
 const router = createBrowserRouter(
     createRoutesFromElements(
         <>
             <Route path='/' element={<Allpage />}>
-            </Route>
+            </Route >
         </>
 
     ))
