@@ -23,6 +23,7 @@ body{
 html.dark body{
   background-color: theme('colors.dark.grey_50');
   color: theme('colors.dark.grey_700');
+  overflow-x: hidden;
 }
 
 a, button{

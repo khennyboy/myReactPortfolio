@@ -7,7 +7,7 @@ const Form = () => {
         ref.current && ref.current.focus()
     })
 
-    const message = 'This place cant be empty'
+    const message = 'This place can\'t be empty'
     return (
         <form className="mt-10 mb-4">
             <div className="mb-6">
