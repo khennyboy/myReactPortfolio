@@ -4,7 +4,7 @@ import { TbWorldWww } from "react-icons/tb";
 const EachProject = () => {
     return (
         <>
-            <div className="mb-8">
+            <div className="pb-4 mb-[3rem] md:mb-0 md-pb-0 border-b dark:border-dark-grey_200 border-light-grey_200 px-4 md:border-none lg:px-8">
                 <img src="/desktop-preview.jpg" alt="ProjectImage"
                     className="rounded-[10px] mb-6 min-h-[300px] " />
                 <div className="text-xl mb-4 leading-3">Project name</div>
@@ -25,7 +25,7 @@ const EachProject = () => {
                     </a>
                 </div>
             </div>
-            <div className="mb-8">
+            <div className="pb-4 mb-[3rem] md:mb-0 md-pb-0 border-b dark:border-dark-grey_200 border-light-grey_200 px-4 md:border-none lg:px-8">
                 <img src="/desktop-preview.jpg" alt="ProjectImage"
                     className="rounded-[10px] mb-6 min-h-[300px]" />
                 <div className="text-xl mb-4 leading-3">Project name</div>
@@ -46,7 +46,7 @@ const EachProject = () => {
                     </a>
                 </div>
             </div>
-            <div className="mb-8">
+            <div className="pb-4 mb-[3rem] md:mb-0 md-pb-0 border-b dark:border-dark-grey_200 border-light-grey_200 px-4 md:border-none lg:px-8">
                 <img src="/desktop-preview.jpg" alt="ProjectImage"
                     className="rounded-[10px] mb-6 min-h-[300px]" />
                 <div className="text-xl mb-4 leading-3">Project name</div>
@@ -67,7 +67,7 @@ const EachProject = () => {
                     </a>
                 </div>
             </div>
-            <div className="mb-8">
+            <div className="pb-4 mb-[3rem] md:mb-0 md-pb-0 border-b dark:border-dark-grey_200 border-light-grey_200 px-4 md:border-none lg:px-8">
                 <img src="/desktop-preview.jpg" alt="ProjectImage"
                     className="rounded-[10px] mb-6 min-h-[300px]" />
                 <div className="text-xl mb-4 leading-3">Project name</div>
