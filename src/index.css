@@ -18,6 +18,7 @@ body{
   font-size: 1.2rem;
   color: theme('colors.light.grey_700');
   background-color: theme('colors.light.grey_0');
+  overflow-x: hidden;
 }
 html.dark body{
   background-color: theme('colors.dark.grey_50');
