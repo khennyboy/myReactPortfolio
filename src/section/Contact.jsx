@@ -19,7 +19,7 @@ const Contact = () => {
             <section className="dark:bg-dark-grey_0 bg-light-grey_50 
          my-[6rem] py-[4rem] lg:py-[6rem] border-light-grey_200 border-[1px] border-solid 
          rounded-[10px] dark:border-dark-grey_200" ref={ref} data-aos="fade-right" >
-                <p className="text-center text-2xl px-4 mb-4">
+                <p className="text-center text-2xl px-4 mb-4 leading-6">
                     I would love to hear about your project and how i could help.
                 </p>
                 <img src="/3d-graphic-designer-showing-thumbs-up-png 1.png" alt="Contact_icon" className="max-w-[40%] w-[300px] mx-auto mb-4" />
