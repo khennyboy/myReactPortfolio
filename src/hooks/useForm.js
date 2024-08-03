@@ -6,7 +6,7 @@ const useEditForm = (close) => {
     const { mutate: sendMessage, isPending: isSending } = useMutation({
         mutationFn: handleMessage,
         onSuccess: () => {
-            toast.success('Message send successfully');
+            toast.success('Message sent successfully');
             close()
         },
         onError: (err) => toast.error(err.message)
