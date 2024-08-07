@@ -15,7 +15,12 @@ const EachProject = () => {
     }, []);
 
     const { isLoading, projects = [], isSuccess, error } = useProjects()
-    if (isLoading) return <Spinner />
+    if (isLoading) return (
+        <div className="col-span-full">
+            <Spinner />
+        </div>
+
+    )
 
     if (!isSuccess) return (
         <div className="indent-5">
