@@ -26,7 +26,7 @@ const Footer = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.https://twitter.com/Abdullatee28061"
+                    <a href="#"
                         aria-label="twitter link"
                         className="hover:bg-light-grey_100 block p-2 rounded-md
                     focus:ring-normal-brand_600 focus:ring-1 text-normal-brand_600
