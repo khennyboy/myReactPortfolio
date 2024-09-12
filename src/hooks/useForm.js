@@ -3,16 +3,16 @@ import toast from "react-hot-toast";
 import { handleMessage } from "../api_Services/Request";
 
 const useEditForm = (close) => {
-    const { mutate: sendMessage, isPending: isSending } = useMutation({
-        mutationFn: handleMessage,
-        onSuccess: () => {
-            toast.success('Message sent successfully');
-            close()
-        },
-        onError: (err) => toast.error(err.message)
-    })
+  const { mutate: sendMessage, isPending: isSending } = useMutation({
+    mutationFn: handleMessage,
+    onSuccess: () => {
+      toast.success("Message sent successfully");
+      close();
+    },
+    onError: (err) => toast.error(err.message),
+  });
 
-    return { sendMessage, isSending }
-}
+  return { sendMessage, isSending };
+};
 
-export default useEditForm
+export default useEditForm;

@@ -2,65 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-.spinner{
+.spinner {
   margin: 4.8rem auto;
-  width: 6.4rem; 
+  width: 6.4rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(farthest-side, #4f46e5 94%, #0000)
-      top/10px 10px no-repeat,
-    conic-gradient(#0000 30%, #4f46e5); 
+  background:
+    radial-gradient(farthest-side, #4f46e5 94%, #0000) top/10px 10px no-repeat,
+    conic-gradient(#0000 30%, #4f46e5);
   -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
   mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
 }
 
-body{
+body {
   font-size: 1.2rem;
-  color: theme('colors.light.grey_700');
-  background-color: theme('colors.light.grey_0');
+  color: theme("colors.light.grey_700");
+  background-color: theme("colors.light.grey_0");
   overflow-x: hidden;
 }
-html.dark body{
-  background-color: theme('colors.dark.grey_50');
-  color: theme('colors.dark.grey_700');
+html.dark body {
+  background-color: theme("colors.dark.grey_50");
+  color: theme("colors.dark.grey_700");
   overflow-x: hidden;
 }
 
-a, button{
-  transition:  0.2s linear;
+a,
+button {
+  transition: 0.2s linear;
 }
 
-textarea::-webkit-scrollbar{
+textarea::-webkit-scrollbar {
   display: none;
 }
-input, textarea{
+input,
+textarea {
   color: inherit;
   font: inherit;
 }
-form > *{
+form > * {
   font-size: 1rem;
 }
 
-input:not(:placeholder-shown) ~ label, textarea:not(:placeholder-shown) ~ label {
-  @apply 
-    top-0 
+input:not(:placeholder-shown) ~ label,
+textarea:not(:placeholder-shown) ~ label {
+  @apply top-0 
     -translate-y-1/2 
     dark:bg-normal-backdropColor 
     bg-light-grey_100
     px-4;
 }
-input:-webkit-autofill{
-  -webkit-text-fill-color: theme('colors.light.grey_700');
+input:-webkit-autofill {
+  -webkit-text-fill-color: theme("colors.light.grey_700");
   -webkit-background-clip: text;
 }
-html.dark input:-webkit-autofill{
-  -webkit-text-fill-color: theme('colors.dark.grey_700');
+html.dark input:-webkit-autofill {
+  -webkit-text-fill-color: theme("colors.dark.grey_700");
 }
-.projects > :not(:first-child){
+.projects > :not(:first-child) {
   padding-top: 3rem;
 }
-@media screen and (min-width: 768px)  {
-  .projects > :not(:first-child){
+@media screen and (min-width: 768px) {
+  .projects > :not(:first-child) {
     padding-top: 0rem;
   }
 }

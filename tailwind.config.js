@@ -1,45 +1,43 @@
-export default {
-  darkMode: 'selector',
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+module.exports = {
+  darkMode: "selector",
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       animation: {
-        rotate: 'rotate 1.5s infinite linear',
+        rotate: "rotate 1.5s infinite linear",
       },
       keyframes: {
         rotate: {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
         },
-      }, colors: {
+      },
+      colors: {
         light: {
-          grey_0: '#fff',
-          grey_50: '#f9fafb',
-          grey_100: '#f3f4f6',
-          grey_200: '#e5e7eb',
-          grey_300: '#d1d5db',
-          grey_400: '#9ca3af',
-          grey_500: '#6b7280',
-          grey_600: '#4b5563',
-          grey_700: '#374151',
-          grey_800: '#1f2937',
-          grey_900: '#111827',
-          blue_100: '#e0f2fe',
-          blue_700: '#0369a1',
-          green_10: '#dcfce7',
-          green_700: '#15803d',
-          yellow_100: '#fef9c3',
-          yellow_700: '#a16207',
-          silver_100: '#e5e7eb',
-          silver_700: '#374151',
-          indigo_100: '#e0e7ff',
-          indigo_700: '#4338ca',
-          red_100: '#fee2e2',
-          red_700: '#b91c1c',
-          red_800: '#991b1b',
+          grey_0: "#fff",
+          grey_50: "#f9fafb",
+          grey_100: "#f3f4f6",
+          grey_200: "#e5e7eb",
+          grey_300: "#d1d5db",
+          grey_400: "#9ca3af",
+          grey_500: "#6b7280",
+          grey_600: "#4b5563",
+          grey_700: "#374151",
+          grey_800: "#1f2937",
+          grey_900: "#111827",
+          blue_100: "#e0f2fe",
+          blue_700: "#0369a1",
+          green_10: "#dcfce7",
+          green_700: "#15803d",
+          yellow_100: "#fef9c3",
+          yellow_700: "#a16207",
+          silver_100: "#e5e7eb",
+          silver_700: "#374151",
+          indigo_100: "#e0e7ff",
+          indigo_700: "#4338ca",
+          red_100: "#fee2e2",
+          red_700: "#b91c1c",
+          red_800: "#991b1b",
         },
         dark: {
           grey_0: "#18212f",
@@ -77,20 +75,20 @@ export default {
           brand_800: "#3730a3",
           brand_900: "#312e81",
           primary_800: "#2C3D4F",
-          primary_950: '#141C24',
-          backdropColor: 'rgba(255, 255, 255, 0.1)',
-          box_shadow: 'shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.12)'
-        }
+          primary_950: "#141C24",
+          backdropColor: "rgba(255, 255, 255, 0.1)",
+          box_shadow: "shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.12)",
+        },
       },
       fontFamily: {
-        sans: ['Josefin Sans', 'sans-serif']
+        sans: ["Josefin Sans", "sans-serif"],
       },
       screens: {
-        tablet: '55em',
-        desktop: { max: '94em', min: '75.1em' },
-        smallMobile: { max: '21.25em' }
+        tablet: "55em",
+        desktop: { max: "94em", min: "75.1em" },
+        smallMobile: { max: "21.25em" },
       },
     },
   },
   plugins: [],
-}
+};

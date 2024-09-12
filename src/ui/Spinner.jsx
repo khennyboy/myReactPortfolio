@@ -1,8 +1,5 @@
 const Spinner = () => {
-    return (
-        <div className="spinner animate-rotate"></div>
+  return <div className="spinner animate-rotate"></div>;
+};
 
-    )
-}
-
-export default Spinner
+export default Spinner;
