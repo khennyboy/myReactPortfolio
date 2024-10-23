@@ -28,32 +28,28 @@ const EachProject = () => {
       {projects.map((eachProject, index) => {
         const style = index % 2 === 0 ? "fade-left" : "fade-riht";
         return (
-          <div className="lg:px-8 px-4" key={eachProject.id} data-aos={style}>
+          <div className="px-4 lg:px-8" key={eachProject.id} data-aos={style}>
             <img
               src={eachProject.image}
               alt="ProjectImage"
               loading="lazy"
-              className="rounded-[10px] mb-6 min-h-[300px] "
+              className="mb-6 min-h-[300px] rounded-[10px]"
             />
-            <div className="text-xl mb-4 leading-3">
+            <div className="mb-4 text-xl leading-3 lg:leading-5">
               {eachProject.projectName}
             </div>
             <div className="flex gap-6">
               <a
                 href={eachProject.githubUrl}
-                className="hover:bg-light-grey_100 block p-2 rounded-md
-                                focus:ring-normal-brand_600 focus:ring-1 text-normal-brand_600
-                                dark:hover:bg-dark-grey_100 dark:text-dark-grey_700"
+                className="block rounded-md p-2 text-normal-brand_600 hover:bg-light-grey_100 focus:ring-1 focus:ring-normal-brand_600 dark:text-dark-grey_700 dark:hover:bg-dark-grey_100"
               >
-                <FaGithub className="w-[1.4rem] h-[1.4rem] " />
+                <FaGithub className="h-[1.4rem] w-[1.4rem]" />
               </a>
               <a
                 href={eachProject.liveUrl}
-                className="hover:bg-light-grey_100 block p-2 rounded-md
-                                focus:ring-normal-brand_600 focus:ring-1 text-normal-brand_600
-                                dark:hover:bg-dark-grey_100 dark:text-dark-grey_700"
+                className="block rounded-md p-2 text-normal-brand_600 hover:bg-light-grey_100 focus:ring-1 focus:ring-normal-brand_600 dark:text-dark-grey_700 dark:hover:bg-dark-grey_100"
               >
-                <TbWorldWww className="w-[1.4rem] h-[1.4rem] " />
+                <TbWorldWww className="h-[1.4rem] w-[1.4rem]" />
               </a>
             </div>
           </div>

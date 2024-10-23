@@ -5,6 +5,7 @@ import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { IoIosGitMerge } from "react-icons/io";
+import { FaNode } from "react-icons/fa";
 
 const EachSkill = () => {
   return (
@@ -17,6 +18,9 @@ const EachSkill = () => {
       </div>
       <div className="text-6xl md:text-[5rem]" title="Javascript">
         <IoLogoJavascript />
+      </div>
+      <div className="text-6xl md:text-[5rem]" title="Nodejs">
+        <FaNode />
       </div>
       <div className="text-6xl md:text-[5rem]" title="Tailwindcss">
         <SiTailwindcss />
