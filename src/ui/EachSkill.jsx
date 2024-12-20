@@ -1,41 +1,42 @@
-import { FaHtml5 } from "react-icons/fa";
+import { FaHtml5, FaReact, FaNode } from "react-icons/fa";
 import { DiCss3 } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
+import { IoLogoJavascript, IoIosGitMerge } from "react-icons/io";
 import { RiNextjsFill } from "react-icons/ri";
-import { IoIosGitMerge } from "react-icons/io";
-import { FaNode } from "react-icons/fa";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
-const EachSkill = () => {
-  return (
-    <>
-      <div className="text-6xl md:text-[5rem]" title="Html5">
-        <FaHtml5 />
-      </div>
-      <div className="text-6xl md:text-[5rem]" title="Css3">
-        <DiCss3 />
-      </div>
-      <div className="text-6xl md:text-[5rem]" title="Javascript">
-        <IoLogoJavascript />
-      </div>
-      <div className="text-6xl md:text-[5rem]" title="Nodejs">
-        <FaNode />
-      </div>
-      <div className="text-6xl md:text-[5rem]" title="Tailwindcss">
-        <SiTailwindcss />
-      </div>
-      <div className="text-6xl md:text-[5rem]" title="React">
-        <FaReact />
-      </div>
-      <div className="text-6xl md:text-[5rem]" title="Nextjs">
-        <RiNextjsFill />
-      </div>
-      <div className="text-6xl md:text-[5rem]" title="Git">
-        <IoIosGitMerge />
-      </div>
-    </>
-  );
-};
+const skills = [
+  { className: "html5", icon: <FaHtml5 />, label: "Html5" },
+  { className: "css3", icon: <DiCss3 />, label: "Css3" },
+  { className: "js", icon: <IoLogoJavascript />, label: "Javascript" },
+  { className: "tailwind", icon: <SiTailwindcss />, label: "Tailwindcss" },
+  { className: "react", icon: <FaReact />, label: "React" },
+  { className: "next", icon: <RiNextjsFill />, label: "Nextjs" },
+  { className: "git", icon: <IoIosGitMerge />, label: "Git" },
+  { className: "node", icon: <FaNode />, label: "Node.js" },
+];
+
+const SkillWithTooltip = ({ className, icon, label }) => (
+  <>
+    <div className={`${className} text-6xl md:text-[5rem]`}>{icon}</div>
+    <Tooltip anchorSelect={`.${className}`} place="top">
+      {label}
+    </Tooltip>
+  </>
+);
+
+const EachSkill = () => (
+  <>
+    {skills.map((skill, index) => (
+      <SkillWithTooltip
+        key={index}
+        className={skill.className}
+        icon={skill.icon}
+        label={skill.label}
+      />
+    ))}
+  </>
+);
 
 export default EachSkill;

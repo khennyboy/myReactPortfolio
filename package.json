@@ -28,6 +28,7 @@
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.24.0",
     "react-toastify": "^10.0.5",
+    "react-tooltip": "^5.28.0",
     "recharts": "^2.12.7",
     "suspense": "^0.0.53"
   },

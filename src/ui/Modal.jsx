@@ -37,19 +37,14 @@ const Window = (infos) => {
   if (!openName) return null;
 
   return createPortal(
-    <div
-      className="fixed w-full top-0 left-0 z-50 h-screen 
-        bg-normal-backdropColor backdrop-blur-[4px] flex items-center justify-center"
-    >
+    <div className="fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-normal-backdropColor backdrop-blur-[4px]">
       <div
         ref={formRef}
-        className="relative bg-light-grey_0 dark:bg-dark-grey_0 shadow-normal-box_shadow rounded-lg w-[90%] max-w-[500px] p-6"
+        className="shadow-normal-box_shadow relative w-[90%] max-w-[500px] rounded-lg bg-light-grey_0 p-6 dark:bg-dark-grey_0"
       >
         <button
           onClick={close}
-          className="hover:bg-light-grey_100 block p-2 rounded-md
-                        focus:ring-normal-brand_600 focus:ring-1 text-normal-brand_600 absolute right-4
-                         dark:hover:bg-dark-grey_100 dark:text-dark-grey_700"
+          className="absolute right-4 block rounded-md p-2 text-normal-brand_600 hover:bg-light-grey_100 focus:ring-1 focus:ring-normal-brand_600 dark:text-dark-grey_700 dark:hover:bg-dark-grey_100"
         >
           <HiXMark />
         </button>
