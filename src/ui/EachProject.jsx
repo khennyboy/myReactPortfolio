@@ -33,7 +33,7 @@ const EachProject = () => {
               src={eachProject.image}
               alt="ProjectImage"
               loading="lazy"
-              className="mb-6 min-h-[300px] rounded-[10px]"
+              className="mb-6 min-h-[300px] rounded-[10px] object-cover"
             />
             <div className="mb-4 text-xl leading-3 lg:leading-5">
               {eachProject.projectName}
