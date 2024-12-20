@@ -3,10 +3,10 @@ import { getPojects } from "../api_Services/Request";
 
 export const useProjects = () => {
   const {
-    isLoading,
+    isPending: isLoading,
     data: projects,
     error,
-    isSuccess,
+    isError,
   } = useQuery({
     queryKey: ["projects"],
     queryFn: getPojects,
@@ -14,5 +14,5 @@ export const useProjects = () => {
     // refetchInterval: false
   });
 
-  return { isLoading, projects, error, isSuccess };
+  return { isLoading, projects, isError, error };
 };

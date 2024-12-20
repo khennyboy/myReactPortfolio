@@ -14,7 +14,7 @@ const EachProject = () => {
     });
   }, []);
 
-  const { isLoading, projects = [], isSuccess, error } = useProjects();
+  const { isLoading, projects = [], error, isError } = useProjects();
   if (isLoading)
     return (
       <div className="col-span-full">
@@ -22,7 +22,7 @@ const EachProject = () => {
       </div>
     );
 
-  if (!isSuccess) return <div className="indent-5">{error?.message}</div>;
+  if (isError) return <div className="indent-5">{error?.message}</div>;
   return (
     <>
       {projects.map((eachProject, index) => {
