@@ -25,7 +25,7 @@ const Header = () => {
         </p>
         <div className="flex justify-center gap-4">
           <a
-            href="/sheriffResume.pdf"
+            href="/Sheriff_Abdullateef_Resume.pdf"
             download="sheriff Resume"
             className="py-2 bg-normal-brand_600 text-normal-brand_50 w-[40%] 
                         max-w-[200px] rounded dark:ring-offset-dark-grey_50 smallMobile:w-[45%]
