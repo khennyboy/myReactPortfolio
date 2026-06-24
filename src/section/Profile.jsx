@@ -1,8 +1,8 @@
 import Header from "../ui/Header";
-import Nav from "../ui/Nav";
+import Nav from "../ui/Navs";
 
 const Profile = () => (
-  <header className="h-screen pb-8 relative">
+  <header className="relative h-screen pb-8">
     <Nav />
     <Header />
   </header>
