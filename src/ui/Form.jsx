@@ -1,135 +1,118 @@
 import { useEffect, useRef } from "react";
-import Error from "./Error";
 import { useForm } from "react-hook-form";
 import useEditForm from "../hooks/useForm";
+import Error from "./Error";
 
-const Form = (info) => {
-    const ref = useRef();
-    const { onCloseModal } = info;
-    useEffect(() => {
-        ref.current && ref.current.focus();
-    });
-    let match = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+const EMAIL_REGEX = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
 
-    const { sendMessage, isSending } = useEditForm(onCloseModal);
+// Shared classes
+const fieldWrap = `relative border border-slate-700 rounded-xl bg-slate-900
+                   has-[:focus]:border-violet-500 transition-colors duration-200`;
+const inputBase = `block w-full bg-transparent pt-6 pb-2 px-4 text-white text-sm
+                   placeholder-transparent focus:outline-none peer`;
+const labelBase = `absolute left-4 text-slate-500 text-sm pointer-events-none
+                   transition-all duration-200 ease-out
+                   top-1/2 -translate-y-1/2
+                   peer-focus:top-2.5 peer-focus:translate-y-0 peer-focus:text-[11px] peer-focus:text-violet-400
+                   peer-[:not(:placeholder-shown)]:top-2.5 peer-[:not(:placeholder-shown)]:translate-y-0
+                   peer-[:not(:placeholder-shown)]:text-[11px] peer-[:not(:placeholder-shown)]:text-slate-500`;
 
-    const { register, handleSubmit, formState, reset } = useForm();
+const Form = ({ onCloseModal }) => {
+  const ref = useRef();
+  const { sendMessage, isSending } = useEditForm(onCloseModal);
+  const { register, handleSubmit, formState, reset } = useForm();
+  const { errors } = formState;
 
-    const { errors } = formState;
+  useEffect(() => { ref.current?.focus(); }, []);
 
-    function onSubmit(data) {
-        sendMessage(data);
-    }
+  const { ref: registerRef, ...nameRest } = register("name", {
+    required: "Name can't be empty",
+  });
 
-    return (
-        <form className="mt-10 mb-4" onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-6">
-                <div
-                    className="relative border-light-grey_200 border-[1px] border-solid 
-                    rounded-[10px] dark:border-dark-grey_200 mb-1 has-[:focus]:border-normal-brand_600"
-                >
-                    <input
-                        type="text"
-                        id="name"
-                        className="focus:outline-0 bg-transparent py-4 w-full block pl-4 peer"
-                        placeholder=" "
-                        ref={ref}
-                        {...register("name", {
-                            required: "This feild can't be empty",
-                        })}
-                    />
-                    <label
-                        htmlFor="name"
-                        className="absolute top-1/2 left-4 -translate-y-1/2 peer-focus:top-0 
-                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-80
-                    dark:peer-focus:bg-normal-backdropColor peer-focus:bg-light-grey_100  z-50 peer-focus:px-4"
-                    >
-                        Name
-                    </label>
-                </div>
-                <Error error={errors?.name?.message} />
-            </div>
+  return (
+    <form className="flex flex-col gap-5 mt-6" onSubmit={handleSubmit((d) => sendMessage(d))} noValidate>
 
-            <div className="mb-6">
-                <div
-                    className="relative border-light-grey_200 border-[1px] border-solid 
-                     rounded-[10px] dark:border-dark-grey_200 mb-1 has-[:focus]:border-normal-brand_600"
-                >
-                    <input
-                        type="text"
-                        id="email"
-                        className="focus:outline-0 bg-transparent py-4 w-full block pl-4 peer"
-                        placeholder=" "
-                        {...register("email", {
-                            required: "This feild can't be empty",
-                            validate: (value) => {
-                                return (
-                                    match.test(value) || "Please enter a valid email address"
-                                );
-                            },
-                        })}
-                    />
-                    <label
-                        htmlFor="email"
-                        className="absolute top-1/2 left-4 -translate-y-1/2 peer-focus:top-0 
-                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-80
-                    dark:peer-focus:bg-normal-backdropColor peer-focus:bg-light-grey_100 z-50 peer-focus:px-4"
-                    >
-                        Email
-                    </label>
-                </div>
-                <Error error={errors?.email?.message} />
-            </div>
+      {/* Name */}
+      <div>
+        <div className={fieldWrap}>
+          <input
+            type="text"
+            id="name"
+            placeholder=" "
+            className={inputBase}
+            ref={(el) => { registerRef(el); ref.current = el; }}
+            {...nameRest}
+          />
+          <label htmlFor="name" className={labelBase}>Name</label>
+        </div>
+        <Error error={errors?.name?.message} />
+      </div>
 
-            <div className="mb-6">
-                <div
-                    className="relative border-light-grey_200 border-[1px] border-solid 
-                        rounded-[10px] dark:border-dark-grey_200 mb-1 has-[:focus]:border-normal-brand_600"
-                >
-                    <textarea
-                        id="maninMessage"
-                        className="bg-transparent block w-full resize-none min-h-[150px] focus:outline-0 overflow-auto px-4 pt-4 peer"
-                        placeholder=" "
-                        {...register("mainMessage", {
-                            required: "This feild can't be empty",
-                        })}
-                    />
-                    <label
-                        htmlFor="mainMessage"
-                        className="absolute top-4 left-4  peer-focus:top-0 
-                    peer-focus:-translate-y-1/2 transition-all duration-200 ease-linear opacity-80
-                   dark:peer-focus:bg-normal-backdropColor peer-focus:bg-light-grey_100 z-50 peer-focus:px-4"
-                    >
-                        Message
-                    </label>
-                </div>
-                <Error error={errors?.mainMessage?.message} />
-            </div>
+      {/* Email */}
+      <div>
+        <div className={fieldWrap}>
+          <input
+            type="email"
+            id="email"
+            placeholder=" "
+            className={inputBase}
+            {...register("email", {
+              required: "Email can't be empty",
+              validate: (v) => EMAIL_REGEX.test(v) || "Please enter a valid email address",
+            })}
+          />
+          <label htmlFor="email" className={labelBase}>Email</label>
+        </div>
+        <Error error={errors?.email?.message} />
+      </div>
 
-            <div className="flex gap-4 justify-end ">
-                <button
-                    type="reset"
-                    className="bg-normal-brand_600 text-normal-brand_50 w-[30%] 
-                     max-w-[150px] ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 smallMobile:w-[45%] smallMobile:text-base
-                      text-center hover:bg-normal-brand_700 dark:ring-offset-dark-grey_50 font-[500]"
-                    onClick={reset}
-                    disabled={isSending}
-                >
-                    Reset
-                </button>
+      {/* Message */}
+      <div>
+        <div className={`${fieldWrap} has-[:focus]:border-violet-500`}>
+          <textarea
+            id="mainMessage"
+            placeholder=" "
+            className={`${inputBase} min-h-[130px] resize-none pt-7`}
+            {...register("mainMessage", {
+              required: "Message can't be empty",
+            })}
+          />
+          <label
+            htmlFor="mainMessage"
+            className={`${labelBase} top-4 translate-y-0
+                        peer-focus:top-2 peer-focus:text-[11px] peer-focus:text-violet-400
+                        peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-[11px]`}
+          >
+            Message
+          </label>
+        </div>
+        <Error error={errors?.mainMessage?.message} />
+      </div>
 
-                <button
-                    type="submit"
-                    className="bg-normal-brand_600 text-normal-brand_50 w-[30%] 
-                     max-w-[150px] ring-normal-brand_600 focus:ring-1 rounded py-2 ring-offset-2 smallMobile:w-[45%] smallMobile:text-base
-                      text-center hover:bg-normal-brand_700 dark:ring-offset-dark-grey_50 font-[500]"
-                    disabled={isSending}
-                >
-                    Send
-                </button>
-            </div>
-        </form>
-    );
+      {/* Actions */}
+      <div className="flex justify-end gap-3 pt-1">
+        <button
+          type="button"
+          onClick={() => reset()}
+          disabled={isSending}
+          className="px-5 py-2.5 rounded-lg text-sm font-semibold border border-slate-700 text-white
+                     hover:border-violet-500 hover:bg-violet-500/10 hover:text-violet-300
+                     transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          Reset
+        </button>
+        <button
+          type="submit"
+          disabled={isSending}
+          className="px-5 py-2.5 rounded-lg text-sm font-semibold bg-violet-600 text-white
+                     hover:bg-violet-500 hover:shadow-lg hover:shadow-violet-500/25
+                     transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          {isSending ? "Sending…" : "Send message"}
+        </button>
+      </div>
+    </form>
+  );
 };
 
 export default Form;

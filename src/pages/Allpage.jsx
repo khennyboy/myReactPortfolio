@@ -1,19 +1,19 @@
 import Contact from "../section/Contact";
-import Footer from "../section/Footer";
+import Footer from "../section/Footers";
 import Profile from "../section/Profile";
-import Project from "../section/Projects";
-import Skills from "../section/Skills";
+import Project from "../section/Project";
+import Skill from "../section/Skill";
 
-const Allpage = () => {
-  return (
-    <div className="w-[95%] mx-auto md:w-[90%] lg:w-[85%] overflow-hidden">
+const Allpage = () => (
+  <div className="min-h-screen bg-slate-950 text-white">
+    <div className="mx-auto w-[92%] max-w-5xl">
       <Profile />
-      <Skills />
+      <Skill />
       <Project />
       <Contact />
       <Footer />
     </div>
-  );
-};
+  </div>
+);
 
 export default Allpage;

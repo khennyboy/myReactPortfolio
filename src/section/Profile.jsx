@@ -1,13 +1,11 @@
 import Header from "../ui/Header";
-import Nav from "../ui/nav";
+import Nav from "../ui/Nav";
 
-const Profile = () => {
-  return (
-    <header className="h-screen pb-8 relative">
-      <Nav />
-      <Header />
-    </header>
-  );
-};
+const Profile = () => (
+  <header className="h-screen pb-8 relative">
+    <Nav />
+    <Header />
+  </header>
+);
 
 export default Profile;

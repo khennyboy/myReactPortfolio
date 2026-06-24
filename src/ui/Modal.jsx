@@ -1,61 +1,57 @@
 import { cloneElement, createContext, useContext, useState } from "react";
-import useOutSideClick from "../hooks/useOutsideClick";
 import { createPortal } from "react-dom";
 import { HiXMark } from "react-icons/hi2";
+import useOutSideClick from "../hooks/useOutsideClick";
 
 export const ModalContext = createContext();
 
-function Modal(infos) {
-  const { children } = infos;
-  const [openName, setOpenName] = useState(false);
-  const close = () => setOpenName(false);
-
+function Modal({ children }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const close = () => setIsOpen(false);
   return (
-    <ModalContext.Provider value={{ openName, close, setOpenName }}>
+    <ModalContext.Provider value={{ isOpen, close, setIsOpen }}>
       {children}
     </ModalContext.Provider>
   );
 }
 
-function Open(infos) {
-  const { children } = infos;
-  const { setOpenName } = useContext(ModalContext);
-
+function Open({ children }) {
+  const { setIsOpen } = useContext(ModalContext);
   return cloneElement(children, {
-    onClick: (e) => {
-      e.stopPropagation();
-      setOpenName((prev) => !prev);
-    },
+    onClick: (e) => { e.stopPropagation(); setIsOpen((p) => !p); },
   });
 }
 
-const Window = (infos) => {
-  const { children } = infos;
-  const { openName, close } = useContext(ModalContext);
+function Window({ children }) {
+  const { isOpen, close } = useContext(ModalContext);
   const formRef = useOutSideClick(close);
-
-  if (!openName) return null;
+  if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-normal-backdropColor backdrop-blur-[4px]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-4
+                    bg-black/70 backdrop-blur-md">
       <div
         ref={formRef}
-        className="shadow-normal-box_shadow relative w-[90%] max-w-[500px] rounded-lg bg-light-grey_0 p-6 dark:bg-dark-grey_0"
+        className="relative w-full max-w-[480px] bg-slate-900 border border-slate-800
+                   rounded-2xl p-7 shadow-2xl shadow-black/60"
       >
         <button
           onClick={close}
-          className="absolute right-4 block rounded-md p-2 text-normal-brand_600 hover:bg-light-grey_100 focus:ring-1 focus:ring-normal-brand_600 dark:text-dark-grey_700 dark:hover:bg-dark-grey_100"
+          aria-label="Close"
+          className="absolute top-4 right-4 flex items-center justify-center w-8 h-8
+                     rounded-md text-slate-400 hover:text-white hover:bg-violet-500/10
+                     transition-colors duration-200 focus-visible:outline-none
+                     focus-visible:ring-2 focus-visible:ring-violet-500"
         >
-          <HiXMark />
+          <HiXMark className="text-lg" />
         </button>
-        <div>{cloneElement(children, { onCloseModal: close })}</div>
+        {cloneElement(children, { onCloseModal: close })}
       </div>
     </div>,
     document.body,
   );
-};
+}
 
 Modal.Open = Open;
 Modal.Window = Window;
-
 export default Modal;
