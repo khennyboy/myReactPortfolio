@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", sans-serif; 
+  --font-display: "Inter", sans-serif;
 }
 
-* { box-sizing: border-box; }
-body { background-color: #020617; } 
+body {
+  @apply font-display bg-slate-950;
+}
