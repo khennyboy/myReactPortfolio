@@ -5,5 +5,13 @@
 }
 
 body {
-  @apply font-display bg-slate-950;
+  @apply font-display overflow-x-hidden bg-slate-950 ;
+}
+
+html {
+  @apply  scroll-smooth;
+}
+
+button{
+  @apply cursor-pointer
 }

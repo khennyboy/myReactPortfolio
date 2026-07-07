@@ -13,9 +13,9 @@ const inputBase = `block w-full bg-transparent pt-6 pb-2 px-4 text-white text-sm
 const labelBase = `absolute left-4 text-slate-500 text-sm pointer-events-none
                    transition-all duration-200 ease-out
                    top-1/2 -translate-y-1/2
-                   peer-focus:top-2.5 peer-focus:translate-y-0 peer-focus:text-[11px] peer-focus:text-violet-400
-                   peer-[:not(:placeholder-shown)]:top-2.5 peer-[:not(:placeholder-shown)]:translate-y-0
-                   peer-[:not(:placeholder-shown)]:text-[11px] peer-[:not(:placeholder-shown)]:text-slate-500`;
+                   peer-focus:top-2.5 peer-focus:translate-y-0 peer-focus:text-[10px] peer-focus:text-violet-400
+                   peer-not-placeholder-shown:top-2.5 peer-not-placeholder-shown:translate-y-0
+                   peer-not-placeholder-shown:text-[10px] peer-not-placeholder-shown:text-slate-500`;
 
 const Form = ({ onCloseModal }) => {
   const ref = useRef();
@@ -23,15 +23,20 @@ const Form = ({ onCloseModal }) => {
   const { register, handleSubmit, formState, reset } = useForm();
   const { errors } = formState;
 
-  useEffect(() => { ref.current?.focus(); }, []);
+  useEffect(() => {
+    ref.current?.focus();
+  }, []);
 
   const { ref: registerRef, ...nameRest } = register("name", {
     required: "Name can't be empty",
   });
 
   return (
-    <form className="flex flex-col gap-5 mt-6" onSubmit={handleSubmit((d) => sendMessage(d))} noValidate>
-
+    <form
+      className="mt-6 flex flex-col gap-5"
+      onSubmit={handleSubmit((d) => sendMessage(d))}
+      noValidate
+    >
       {/* Name */}
       <div>
         <div className={fieldWrap}>
@@ -40,10 +45,15 @@ const Form = ({ onCloseModal }) => {
             id="name"
             placeholder=" "
             className={inputBase}
-            ref={(el) => { registerRef(el); ref.current = el; }}
+            ref={(el) => {
+              registerRef(el);
+              ref.current = el;
+            }}
             {...nameRest}
           />
-          <label htmlFor="name" className={labelBase}>Name</label>
+          <label htmlFor="name" className={labelBase}>
+            Name
+          </label>
         </div>
         <Error error={errors?.name?.message} />
       </div>
@@ -58,30 +68,31 @@ const Form = ({ onCloseModal }) => {
             className={inputBase}
             {...register("email", {
               required: "Email can't be empty",
-              validate: (v) => EMAIL_REGEX.test(v) || "Please enter a valid email address",
+              validate: (v) =>
+                EMAIL_REGEX.test(v) || "Please enter a valid email address",
             })}
           />
-          <label htmlFor="email" className={labelBase}>Email</label>
+          <label htmlFor="email" className={labelBase}>
+            Email
+          </label>
         </div>
         <Error error={errors?.email?.message} />
       </div>
 
       {/* Message */}
       <div>
-        <div className={`${fieldWrap} has-[:focus]:border-violet-500`}>
+        <div className={`${fieldWrap} has-focus:border-violet-500`}>
           <textarea
             id="mainMessage"
             placeholder=" "
-            className={`${inputBase} min-h-[130px] resize-none pt-7`}
+            className={`${inputBase} min-h-32.5 resize-none pt-7`}
             {...register("mainMessage", {
               required: "Message can't be empty",
             })}
           />
           <label
             htmlFor="mainMessage"
-            className={`${labelBase} top-4 translate-y-0
-                        peer-focus:top-2 peer-focus:text-[11px] peer-focus:text-violet-400
-                        peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-[11px]`}
+            className={`${labelBase} peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-[11px] top-4 translate-y-0 peer-focus:top-2 peer-focus:text-[11px] peer-focus:text-violet-400`}
           >
             Message
           </label>
@@ -95,18 +106,14 @@ const Form = ({ onCloseModal }) => {
           type="button"
           onClick={() => reset()}
           disabled={isSending}
-          className="px-5 py-2.5 rounded-lg text-sm font-semibold border border-slate-700 text-white
-                     hover:border-violet-500 hover:bg-violet-500/10 hover:text-violet-300
-                     transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+          className="rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:border-violet-500 hover:bg-violet-500/10 hover:text-violet-300 disabled:cursor-not-allowed disabled:opacity-40"
         >
           Reset
         </button>
         <button
           type="submit"
           disabled={isSending}
-          className="px-5 py-2.5 rounded-lg text-sm font-semibold bg-violet-600 text-white
-                     hover:bg-violet-500 hover:shadow-lg hover:shadow-violet-500/25
-                     transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+          className="rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-violet-500 hover:shadow-lg hover:shadow-violet-500/25 disabled:cursor-not-allowed disabled:opacity-40"
         >
           {isSending ? "Sending…" : "Send message"}
         </button>

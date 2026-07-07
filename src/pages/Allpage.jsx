@@ -5,7 +5,7 @@ import Project from "../section/Project";
 import Skill from "../section/Skill";
 
 const Allpage = () => (
-  <div className="min-h-screen bg-slate-950 text-white">
+  <div className="bg-slate-950 text-white">
     <div className="mx-auto w-[92%] max-w-5xl">
       <Profile />
       <Skill />

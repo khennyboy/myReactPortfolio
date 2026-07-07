@@ -32,7 +32,7 @@ function Window({ children }) {
                     bg-black/70 backdrop-blur-md">
       <div
         ref={formRef}
-        className="relative w-full max-w-[480px] bg-slate-900 border border-slate-800
+        className="relative w-full max-w-120 bg-slate-900 border border-slate-800
                    rounded-2xl p-7 shadow-2xl shadow-black/60"
       >
         <button

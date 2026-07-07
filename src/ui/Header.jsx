@@ -2,14 +2,10 @@ import { LuMessageSquare } from "react-icons/lu";
 import { MdFileDownload } from "react-icons/md";
 
 const Header = () => {
-  function handleScroll() {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  }
-
   return (
-    <section className="flex min-h-svh flex-col items-center justify-center gap-12 pt-24 text-center md:flex-row md:gap-16 md:pt-0 md:text-left">
-      <div className="flex-1">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-violet-400">
+    <section className="flex h-full flex-col items-center justify-center gap-12 pt-24 text-center md:flex-row md:gap-16 md:pt-0 md:text-left">
+      <div className="md:flex-1">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-violet-400">
           Frontend Developer
         </p>
         <h1 className="mb-5 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
@@ -28,12 +24,12 @@ const Header = () => {
           >
             Resume <MdFileDownload className="text-base" />
           </a>
-          <button
-            onClick={handleScroll}
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:border-violet-500 hover:bg-violet-500/10 hover:text-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          <a
+            href="#contact"
+            className="inline-flex  items-center gap-2 rounded-lg border border-slate-700 px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:border-violet-500 hover:bg-violet-500/10 hover:text-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Contact me <LuMessageSquare className="text-base" />
-          </button>
+          </a>
         </div>
       </div>
 
