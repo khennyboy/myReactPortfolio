@@ -22,7 +22,7 @@ const Contact = () => {
         <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
           Contact
         </h2>
-        <p className="mx-auto mb-8 max-w-sm text-base leading-relaxed text-slate-400">
+        <p className="mx-auto mb-8 max-w-sm px-4 text-base leading-relaxed text-slate-400">
           I&apos;d love to hear about your project and how I could help.
         </p>
         <img

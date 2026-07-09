@@ -3,7 +3,7 @@ import { MdFileDownload } from "react-icons/md";
 
 const Header = () => {
   return (
-    <section className="flex h-full flex-col items-center justify-center gap-12 pt-24 text-center md:flex-row md:gap-16 md:pt-0 md:text-left">
+    <section className="flex h-full flex-col items-center justify-center gap-8 pt-24 text-center md:flex-row md:gap-16 md:pt-0 md:text-left">
       <div className="md:flex-1">
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-violet-400">
           Frontend Developer
@@ -12,9 +12,14 @@ const Header = () => {
           Hi, I&apos;m{" "}
           <span className="text-violet-400">Sheriff Abdullateef</span>
         </h1>
-        <p className="mx-auto mb-8 max-w-md text-lg leading-relaxed text-slate-400 md:mx-0">
-          Based in Nigeria — I build accessible, performant web experiences that
-          people actually enjoy using.
+        <p className="mx-auto mb-8 max-w-md text-pretty text-sm font-semibold leading-tight text-slate-400 md:mx-0 md:text-base">
+          Frontend Developer with hands-on experience in JavaScript, TypeScript,
+          React, Next.js, and TailwindCSS. I build React/TypeScript projects
+          exploring modern patterns like Suspense and concurrent rendering, with
+          a strong focus on clean, maintainable code. Passionate about taking on
+          challenging projects that push my technical range, and eager to
+          contribute to a team where I can grow my frontend expertise and
+          deliver well-engineered products.
         </p>
         <div className="flex flex-wrap justify-center gap-4 md:justify-start">
           <a
@@ -26,7 +31,7 @@ const Header = () => {
           </a>
           <a
             href="#contact"
-            className="inline-flex  items-center gap-2 rounded-lg border border-slate-700 px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:border-violet-500 hover:bg-violet-500/10 hover:text-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:border-violet-500 hover:bg-violet-500/10 hover:text-violet-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Contact me <LuMessageSquare className="text-base" />
           </a>
@@ -37,7 +42,7 @@ const Header = () => {
       <div className="relative shrink-0">
         <div className="bg-conic-[from_0deg,#7c3aed,transparent_60%,#7c3aed] absolute inset-0 animate-spin rounded-full opacity-60 [animation-duration:8s]" />
         <img
-          src="/myimageResize (1).webp"
+          src="/sheriff_image.png"
           alt="Sheriff Abdullateef"
           className="relative z-10 h-52 w-52 rounded-full border-4 border-slate-950 object-cover md:h-64 md:w-64"
           loading="eager"
