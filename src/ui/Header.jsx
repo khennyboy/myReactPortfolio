@@ -3,23 +3,19 @@ import { MdFileDownload } from "react-icons/md";
 
 const Header = () => {
   return (
-    <section className="flex h-full flex-col items-center justify-center gap-8 pt-24 text-center md:flex-row md:gap-16 md:pt-0 md:text-left">
-      <div className="md:flex-1">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-violet-400">
+    <section className="flex h-full flex-col items-center justify-center gap-6 pt-24 text-center md:flex-row md:gap-16 md:pt-0 md:text-left">
+      <div className="space-y-2 sm:space-y-3 md:flex-1">
+        <p className="text-sm font-semibold uppercase tracking-widest text-violet-400">
           Frontend Developer
         </p>
-        <h1 className="mb-5 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
+        <h1 className="text-balance text-3xl font-bold leading-none tracking-tight text-white md:text-4xl lg:text-6xl">
           Hi, I&apos;m{" "}
           <span className="text-violet-400">Sheriff Abdullateef</span>
         </h1>
-        <p className="mx-auto mb-8 max-w-md text-pretty text-sm font-semibold leading-tight text-slate-400 md:mx-0 md:text-base">
-          Frontend Developer with hands-on experience in JavaScript, TypeScript,
-          React, Next.js, and TailwindCSS. I build React/TypeScript projects
-          exploring modern patterns like Suspense and concurrent rendering, with
-          a strong focus on clean, maintainable code. Passionate about taking on
-          challenging projects that push my technical range, and eager to
-          contribute to a team where I can grow my frontend expertise and
-          deliver well-engineered products.
+        <p className="mx-auto max-w-md text-balance text-sm font-semibold text-slate-400 md:mx-0 md:text-base">
+          Frontend Developer specializing in React, Next.js, TypeScript, and
+          Tailwind CSS. Focused on building clean, high-performance web
+          applications with modern engineering patterns
         </p>
         <div className="flex flex-wrap justify-center gap-4 md:justify-start">
           <a

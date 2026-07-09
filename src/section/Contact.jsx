@@ -14,15 +14,13 @@ const Contact = () => {
       <section
         id="contact"
         data-aos="fade-up"
-        className="my-24 scroll-m-12 rounded-2xl border border-slate-800 bg-slate-900 py-14 text-center lg:py-20"
+        className="my-24 scroll-m-12 space-y-2 rounded-2xl border border-slate-800 bg-slate-900 py-14 text-center lg:py-20"
       >
-        <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-violet-400">
+        <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">
           Get in touch
         </p>
-        <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
-          Contact
-        </h2>
-        <p className="mx-auto mb-8 max-w-sm px-4 text-base leading-relaxed text-slate-400">
+        <h2 className="text-3xl font-bold text-white md:text-4xl">Contact</h2>
+        <p className="text-balance px-4 text-base leading-tight text-slate-400">
           I&apos;d love to hear about your project and how I could help.
         </p>
         <img
