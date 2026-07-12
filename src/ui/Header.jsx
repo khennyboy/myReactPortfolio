@@ -3,8 +3,8 @@ import { MdFileDownload } from "react-icons/md";
 
 const Header = () => {
   return (
-    <section className="flex h-full flex-col items-center justify-center gap-6 pt-24 text-center md:flex-row md:gap-16 md:pt-0 md:text-left">
-      <div className="space-y-2 sm:space-y-3 md:flex-1">
+    <section className="flex h-full flex-col items-center justify-center gap-6 pt-16 text-center md:flex-row md:gap-16 md:pt-0 md:text-left">
+      <div className="space-y-4 sm:space-y-4 md:flex-1">
         <p className="text-sm font-semibold uppercase tracking-widest text-violet-400">
           Frontend Developer
         </p>
