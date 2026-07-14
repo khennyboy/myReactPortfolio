@@ -12,7 +12,7 @@ const Header = () => {
           Hi, I&apos;m{" "}
           <span className="text-violet-400">Sheriff Abdullateef</span>
         </h1>
-        <p className="mx-auto max-w-md text-balance text-sm text-slate-200 md:mx-0 md:text-base md:leading-tight">
+        <p className="mx-auto max-w-md text-balance text-slate-200 md:mx-0 md:text-lg md:leading-tight">
           Frontend Developer specializing in React, Next.js, TypeScript, and
           Tailwind CSS. Focused on building clean, high-performance web
           applications with modern engineering patterns
